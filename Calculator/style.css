@@ -141,21 +141,11 @@ body{
   height: 6rem;
   font-family: Poppins;
   color: var(--dkeytext);
-  /*   text-transform: uppercase; */
   margin: 0.6rem;
   margin-block-end: 1rem;
   border-radius: 0.5em;
   font-weight: 800;
 }
-/* body{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  background-color: black;
-  flex-wrap: nowrap;
-  align-content: center;} */
 .calc{
   width:20rem;
   display:block; 
@@ -174,9 +164,21 @@ body{
     padding-block-end: 0rem;
     align-items: flex-end;
     float: right;
-    overflow-x: hidden;
+    overflow-x:scroll;
     flex-direction: row-reverse;
 }
+#disptext::-webkit-scrollbar {
+  width: 1px;
+  height: 0px;
+  border-radius: 10px;
+}
+
+/* Track */
+#disptext::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 1px;
+}
+
 #dark{
   aspect-ratio: 1/1;
   width:2.5rem;
@@ -186,7 +188,7 @@ body{
   float: right;
   transform: rotate(-180deg);
   background-size: 1.5rem;
-  background-image: url("images/mode.png");
+  background-image: url("/images/mode.png");
   background-repeat: no-repeat;
   background-position: center;
   /* backdrop-filter: invert(100%); */
