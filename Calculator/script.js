@@ -13,7 +13,7 @@ function clr(){
 
 function calc(){
     var num=document.getElementById("disptext").innerHTML;
-    document.getElementById("disptext").innerHTML=eval(num).toFixed(6);
+    document.getElementById("disptext").innerHTML=eval(num);
 }
 
 function back(){
@@ -47,4 +47,24 @@ function theme(index){
       document.documentElement.style.setProperty("--ckeytext",(colors[index].ckeytext));
       document.documentElement.style.setProperty("--backg",(colors[index].backg));
   }
- 
+  
+  // Add event listener on keypress
+document.addEventListener('keypress', (event) => {
+    var name = event.key;
+    if(name=='0'||name=='1'||name=='2'||name=='3'||name=='4'||name=='5'||name=='6'||name=='7'||name=='8'||name=='9'){
+        tap(name);
+    }
+    if(name=='c'||name=='C'){
+        clr();
+    }
+    if(name=="Enter"){
+        calc();
+    }
+    if(name=="b"||name=="B"){
+        back();
+    }
+    if(name=='+'||name=='-'||name=='*'||name=='/'||name=='%'||name=='.'){
+        tap(name);
+    }
+  }, false);
+
