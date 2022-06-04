@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+.buttons div {
+  background-color: #cce5ff;
+  aspect-ratio: 1/1;
+  display: flex;
+  width: 3rem;
+  font-family: Poppins;
+  color: #153c5a;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+  transition:0.2s all ease-in;
+  border-radius: 0.5em;
+  font-weight: 800;
+}
+.buttons div:hover{
+  /* background-color:#C0D9F2; */
+  filter: brightness(95%);
+} 
+.buttons {
+  display: grid;
+  grid-template-areas:
+    "clr mod plus back"
+    "one two three minus"
+    "four five six multi"
+    "seven eight nine divide"
+    "point zero ans ans";
+}
+#1 {
+  grid-area: one;
+}
+#2 {
+  grid-area: two;
+}
+#3 {
+  grid-area: three;
+}
+#4 {
+  grid-area: four;
+}
+#5 {
+  grid-area: five;
+}
+#6 {
+  grid-area: six;
+}
+#7 {
+  grid-area: seven;
+}
+#8 {
+  grid-area: eight;
+}
+#9 {
+  grid-area: nine;
+}
+#0 {
+  grid-area: zero;
+}
+#ans {
+  grid-area: ans;
+  width: 7rem;
+  height: 3rem;
+  background-color: #4d8ac7;
+  color: #cce5ff;
+}
+#plus {
+  grid-area: plus;
+}
+#minus {
+  grid-area: minus;
+}
+#multi {
+  grid-area: multi;
+}
+#divide {
+  grid-area: divide;
+}
+#point {
+  grid-area: point;
+}
+#mod {
+  grid-area: mod;
+}
+#clr {
+  grid-area: clr;
+  background-color: #4d8ac7;
+  color: #cce5ff;
+}
+#back {
+  grid-area: back;
+}
+#back,#mod,#plus,#minus,#multi,#divide{
+  background-color: #a2d0f8;
+  color: #5089be;
+}
+#display{
+  background-color: #cce5ff;
+  display: flex;
+  width: 15rem;
+  height: 5rem;
+  font-family: Poppins;
+  color: #153c5a;
+  /*   text-transform: uppercase; */
+  margin: 0.5rem;
+  border-radius: 0.5em;
+  font-weight: 800;
+}
+/* body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  flex-wrap: nowrap;
+  align-content: center;} */
+.calc{
+  width:16rem;
+  display:flex;
+  flex-direction: column;
+  user-select: none;
+  margin-top:9%;
+  margin-left:40%;
+  padding:1rem;
+  border-radius:1rem;
+  background-color:#EBF5FF; 
+  /* transform: translate(-10%,-10%); */
+}
+#disptext{
+    text-align: right;
+    justify-content: end;
+    display: flex;
+    font-size: 2em;
+    padding: 0.8rem;
+    padding-block-end: 0rem;
+    align-items: flex-end;
+    float: right;
+    overflow-x: hidden;
+    flex-direction: row-reverse;
+}
