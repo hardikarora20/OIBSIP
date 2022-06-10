@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="form">
+        <div id="label">Degrees
+            <br>
+        <input type="number" id="input" placeholder="Input Temperature"></div>
+        <br>
+        <ul id="toggle"> 
+            <li id="fah" onclick="conv(id)">F</li>
+            <li id="cel" onclick="conv(id)" active>C</li>
+            <li id="kel" onclick="conv(id)">K</li>
+        </ul>
+        <!-- <input type="radio" id="temp" name="fav_language" value="Fahrenheit" checked>
+        <label for="html">F</label><br>
+        <input type="radio" id="temp" name="fav_language" value="Celsius">
+        <label for="css">C</label><br> 
+        <div id="label">Type
+            <br>
+            <select id="temp">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celsius">Celsius</option>
+            </select></div>-->
+            <br>
+        <div id="label">Result<br>
+        <input type="number" id="output" placeholder="Converted Temperature">
+        <br><br>
+        <button onclick="calc()">Convert</button>
+        </div>
+        </div>
+    </body>
+</html>
