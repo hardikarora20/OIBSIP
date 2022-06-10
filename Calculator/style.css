@@ -151,7 +151,6 @@ body{
   display:block; 
   user-select: none;
   padding:1rem;
-  transform:scale(1);
   border-radius:1rem;
   background-color:var(--calc);
   box-shadow: 12px 12px 20px #00000015;
@@ -208,6 +207,29 @@ p{
   font-weight: 600;
   color: var(--dkeytext);
   /* filter: brightness(0%); */
+}
+.help{
+  background-color: palevioletred;
+  position: absolute;
+  display: none;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  line-height: 2rem;
+}
+#high,#ent{
+  display: inline-block;
+  background-color: white;
+  padding: 0.3rem;
+  padding-inline: 0.7rem;
+  margin: 0.1rem;
+  aspect-ratio: 1/1;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.1rem;
+}
+#ent{
+  padding: 0.4rem;
+  aspect-ratio: 0;
 }
 @media screen and (orientation:portrait) {
   body{
