@@ -365,7 +365,7 @@ li #text{
     li #text{
         overflow-x:scroll;
         padding: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
         margin-right: 2rem;
     }
 }
