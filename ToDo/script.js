@@ -1,22 +1,46 @@
 var colors=[{"back":"#354f52","backli": "#52796f","li":"#c8d5b9","darker":"#c8d5b9a9","nav":"#253638"},
             {"back":"#05445E","backli": "#377690","li":"#9ad0e8","darker":"#7dbcd6a9","nav":"#032635"}]
 var index=1;
+// localStorage.clear();
+window.onload = function() {
+    if(localStorage.getItem("lastname")==null){}
+    else{
+        const ch=localStorage.getItem("lastname");
+        document.getElementsByTagName("ul")[1].innerHTML+=ch;
+        console.log(ch);
+        index=parseInt(localStorage.getItem("in"));
+    }
+    setTimeout(function(){ 
+        document.getElementById("load").style.opacity=0;
+    }, 500);
+  };
+
+function ad(){
+    if(localStorage.getItem("lastname")==null){}
+    else{
+        const ch=localStorage.getItem("lastname");
+        document.getElementsByTagName("ul")[1].innerHTML+=ch;
+        console.log(ch);
+    }
+}
 function add(){
     let text=document.getElementsByTagName("input")[0].value;
     if(text==""){
     }
     else{
-        
-    document.getElementsByTagName("ul")[1].innerHTML+='<div id="'+index+'"><li><div id="text">'+text+'</div><img class="trash"  id="'+index+'" onclick="remove(id)" src="images/trash.png"></li></div>';
-    document.getElementsByTagName("input")[0].value="";
-    console.log(text);
-    index++;
+        document.getElementsByTagName("ul")[1].innerHTML+='<div id="'+index+'"><li><div id="text">'+text+'</div><img class="trash"  id="'+index+'" onclick="remove(id)" src="images/trash.png"></li></div>';
+        document.getElementsByTagName("input")[0].value="";
+        console.log(text);
+        index++;
+        localStorage.setItem("lastname", document.getElementsByTagName("ul")[1].innerHTML);
+        localStorage.setItem("in",parseInt(index));
     }
 }
 
 function remove(id){
     // document.getElementsByClassName("list")[0].classList.toggle("active");
     document.getElementsByTagName("li")[id].classList.add("active");
+    localStorage.setItem("lastname", document.getElementsByTagName("ul")[1].innerHTML);
     // document.getElementById("1").classList.toggle("active");
     console.log(document.getElementsByTagName("ul")[1].contains="Do this do");
     setTimeout(function(){ 
