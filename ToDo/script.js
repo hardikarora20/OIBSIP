@@ -1,5 +1,5 @@
 var colors=[{"back":"#354f52","backli": "#52796f","li":"#c8d5b9","darker":"#c8d5b9a9","nav":"#253638"},
-            {"back":"#05445E","backli": "#377690","li":"#7dbcd6","darker":"#7dbcd6a9","nav":"#032635"}]
+            {"back":"#05445E","backli": "#377690","li":"#9ad0e8","darker":"#7dbcd6a9","nav":"#032635"}]
 var index=1;
 function add(){
     let text=document.getElementsByTagName("input")[0].value;
