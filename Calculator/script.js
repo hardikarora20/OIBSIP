@@ -13,7 +13,7 @@ function clr(){
 
 function calc(){
     var num=document.getElementById("disptext").innerHTML;
-    document.getElementById("disptext").innerHTML=eval(num).toFixed(6);
+    document.getElementById("disptext").innerHTML=eval(num);
 }
 
 function back(){
@@ -28,12 +28,18 @@ function check(){
         document.getElementById("dark").classList.toggle("dark");
         document.getElementById("dark").style.backgroundColor="black";
         document.getElementById("dark").style.transform="rotate(-180deg)";
+        for(var i=0;i<3;i++){
+            document.getElementsByTagName("meta")[i].content="#4173a4";
+        }
     }
     else{
         theme(1);
         document.getElementById("dark").classList.toggle("dark");
         document.getElementById("dark").style.backgroundColor="white";
         document.getElementById("dark").style.transform="rotate(0deg)";
+        for(var i=0;i<3;i++){
+            document.getElementsByTagName("meta")[i].content="#000000";
+        }
     }
 }
 function theme(index){
@@ -48,4 +54,31 @@ function theme(index){
       document.documentElement.style.setProperty("--backg",(colors[index].backg));
   }
   
+document.addEventListener('keypress', (event) => {
+    var name = event.key;
+    if(name=='0'||name=='1'||name=='2'||name=='3'||name=='4'||name=='5'||name=='6'||name=='7'||name=='8'||name=='9'){
+        tap(name);
+    }
+    if(name=='c'||name=='C'){
+        clr();
+    }
+    if(name=="Enter"){
+        calc();
+    }
+    if(name=="b"||name=="B"){
+        back();
+    }
+    if(name=='+'||name=='-'||name=='*'||name=='/'||name=='%'||name=='.'){
+        tap(name);
+    }
+  }, false);
+  
 
+function he(){
+      console.log(window.innerHeight);
+      console.log(document.getElementsByClassName("calc")[0].clientHeight);
+      if((window.innerHeight)<(document.getElementsByClassName("calc")[0].clientHeight)){
+        document.getElementsByClassName("calc")[0].style.transform="scale(0.5)";
+        console.log("small");
+    }
+}
