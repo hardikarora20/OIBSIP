@@ -1,5 +1,5 @@
 var colors=[{"back":"#354f52","backli": "#52796f","li":"#c8d5b9","darker":"#c8d5b9a9","nav":"#253638"},
-            {"back":"#05445E","backli": "#377690","li":"#9ad0e8","darker":"#7dbcd6a9","nav":"#032635"}]
+            {"back":"#261C2C","backli": "#3E2C41","li":"#bf7fa0","darker":"#bf7fa0","nav":"#1b141f"}]
 var index=1;
 // localStorage.clear();
 window.onload = function() {
@@ -54,7 +54,7 @@ document.addEventListener('keypress', (event) => {
         add();
     }
   }, false);
-  
+var once=1;
 var i=1;
 function he(){
     if(document.getElementsByTagName("p")[0].classList.contains("color")){
@@ -63,6 +63,13 @@ function he(){
     }
     else{
         i=1;
+        while(once==1){
+        setTimeout(function(){ 
+            document.getElementsByTagName("p")[0].innerHTML="Made with 💖 by Hardik";
+        }, 1500);
+        document.getElementsByTagName("p")[0].innerHTML="Easter Egg Found! 🥚";
+        once++;
+        }
         document.getElementsByTagName("p")[0].classList.add("color");
     }
     for(var k=0;k<3;k++){
