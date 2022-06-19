@@ -30,7 +30,7 @@ function add(){
     else{
         document.getElementsByTagName("ul")[1].innerHTML+='<div id="'+index+'"><li><div id="text">'+text+'</div><img class="trash"  id="'+index+'" onclick="remove(id)" src="images/trash.png"></li></div>';
         document.getElementsByTagName("input")[0].value="";
-        console.log(text);
+        // console.log(text);
         index++;
         localStorage.setItem("lastname", document.getElementsByTagName("ul")[1].innerHTML);
         localStorage.setItem("in",parseInt(index));
@@ -41,8 +41,9 @@ function remove(id){
     // document.getElementsByClassName("list")[0].classList.toggle("active");
     document.getElementsByTagName("li")[id].classList.add("active");
     localStorage.setItem("lastname", document.getElementsByTagName("ul")[1].innerHTML);
+    clear();
     // document.getElementById("1").classList.toggle("active");
-    console.log(document.getElementsByTagName("ul")[1].contains="Do this do");
+    // console.log(document.getElementsByTagName("ul")[1].contains="Do this do");
     setTimeout(function(){ 
         document.getElementsByTagName("li")[id].style.display="none"; 
     }, 300);
@@ -79,4 +80,19 @@ function he(){
     document.documentElement.style.setProperty("--backli",(colors[i].backli));
     document.documentElement.style.setProperty("--li",(colors[i].li));
     document.documentElement.style.setProperty("--darker",(colors[i].darker));
+}
+
+function clear(){
+    const count = document.querySelectorAll('li');
+    console.log(count.length);
+    let con=0;
+    for(k=1;k<count.length;k++){
+        if(document.getElementsByTagName("li")[k].classList.contains("active")){}
+        else{
+            con++;
+        }
+    }
+    if(con==0){
+        localStorage.clear();
+    }
 }

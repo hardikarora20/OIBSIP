@@ -201,6 +201,9 @@ p{
     transform: scale(100%);
     z-index: 1;
 }
+path,rect{
+    fill: violet;
+}
 #load{
     /* display: flex; */
     /* margin:0 auto; */
