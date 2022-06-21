@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    display: flex;
+    background-color: #010101;
+    flex-direction: column;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Joan;
+}
+.banner{
+    display: grid;
+    /* overflow-y: hidden; */
+    height: 70vh;
+    background-color: #010101;
+    grid-template-areas:
+        "title img";
+    justify-content: space-evenly;
+    /* grid-template-columns: 3fr 4fr; */
+    align-content: center;
+    align-items: center;
+}
+#bannerimg{
+    /* transform: scale(0.7); */
+    overflow-x: hidden;
+    display: block;
+    height: 70vh;
+    animation: move 10s linear alternate-reverse infinite;
+    margin-left: 30rem;
+    /* padding: 10rem; */
+    grid-area: img;
+}
+#heading{
+    grid-area: title;
+    position: absolute;
+    margin-left: 15rem;
+    color: #f5ede4;
+    /* width: 45vw; */
+}
+#heading b{
+    font-size: 4rem;
+}
+i{
+    font-size: 1.5rem;
+}
+.text{
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 1.6rem 1.6rem 0rem 0rem;
+    background-color: #f5ede4;
+    /* width: 80vw; */
+    width: 90vw;
+    padding: 3%;
+    padding-inline: 5%;
+    padding-top: 4%;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: -2%;
+    /* top:60%; */
+    /* margin-le: auto; */
+    flex-wrap: nowrap;
+    margin-bottom: 2%;
+    align-content: space-around;
+    transition: all 0.2s ease-in-out;
+}
+.text:hover{
+    margin-bottom: 0%;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+p:focus{
+    background-color: red;
+}
+@keyframes move{
+    from{
+        padding-left: 0rem;
+    }
+    to{
+        padding-left: 7rem;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .text{
+        font-size: 4rem;
+        width: 160%;
+        border-radius: 4rem;
+        padding-inline: 8%;
+        margin: 8rem;
+        margin-top: 50%;
+        /* margin-bottom: 20%; */ 
+    }
+    #heading b{
+        margin-top: -60%;
+        font-size: 10rem;
+    }
+    #heading i{
+        font-size: 5rem;
+    }
+    .banner{
+        margin: 0;
+        height: 150vh;
+        width: 200%;
+    }
+    #bannerimg{
+        margin: 0;
+        margin-top: 120%;
+        margin-left: -10%;
+    }
+}
