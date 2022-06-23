@@ -88,11 +88,12 @@ p:focus{
 @media screen and (orientation:portrait) {
     .text{
         font-size: 4rem;
-        width: 160%;
+        width: 150%;
         border-radius: 4rem;
         padding-inline: 8%;
-        margin: 8rem;
-        margin-top: 50%;
+        margin: 4rem;
+        margin-top: 18rem;
+        margin-right: 10rem;
         /* margin-bottom: 20%; */ 
     }
     #heading b{
